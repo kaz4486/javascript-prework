@@ -61,11 +61,15 @@ printMessage('Twój ruch to: ' + playerMove);
 if( (computerMove == 'kamień' && playerMove == 'papier') ||
     (computerMove == 'papier' && playerMove == 'nożyce') ||
     (computerMove == 'nożyce' && playerMove == 'kamień')) {
-        printMessage('Ty wygrywasz!');}
+        printMessage('Ty wygrywasz!');
+    }
   else if ( computerMove == playerMove){
-      printMessage('Remis!');} 
+      printMessage('Remis!');
+    } 
   else if ( playerMove == 'nieznany ruch'){
-      printMessage('Musisz wybrać opcję 1,2 lub 3!');} 
+      printMessage('Musisz wybrać opcję 1,2 lub 3!');
+    } 
   else {
-      printMessage('Przegrywasz!');} 
+      printMessage('Przegrywasz!');
+    } 
 
