@@ -1,5 +1,5 @@
 function playGame(playerInput) {
-  clearMessages;
+  clearMessages();
   function getMoveName(argMoveId) {
     console.log("robię get moveName");
     if (argMoveId == 1) {
@@ -71,8 +71,11 @@ else if(playerInput == '3'){
       printMessage('Przegrywasz!');
     } */
 
+  console.log("moves:", computerMove, playerMove);
+
   function displayResult(argComputerMove, argPlayerMove) {
     console.log("działam, nie działam?");
+
     printMessage("Zagrałem " + argComputerMove + ", a Ty " + argPlayerMove);
 
     if (
@@ -92,13 +95,16 @@ else if(playerInput == '3'){
 }
 
 document.getElementById("play-rock").addEventListener("click", function () {
-  playGame(1)("Kliknąłeś kamień");
+  playGame(1);
+  console.log("Kliknąłeś kamień");
 });
 
 document.getElementById("play-paper").addEventListener("click", function () {
-  playGame(2)("Kliknąłeś papier");
+  playGame(2);
+  console.log("Kliknąłeś papier");
 });
 
 document.getElementById("play-scisors").addEventListener("click", function () {
-  playGame(3)("Kliknąłeś nożyce");
+  playGame(3);
+  console.log("Kliknąłeś nożyce");
 });
