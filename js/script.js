@@ -94,20 +94,20 @@ else if(playerInput == '3'){
     displayResult(computerMove, playerMove);
   };
 
-  const ButtonRock = document.getElementById("play-rock");
-  ButtonRock.addEventListener("click", function () {
+  const buttonRock = document.getElementById("play-rock");
+  buttonRock.addEventListener("click", function () {
     playGame(1);
     console.log("Kliknąłeś kamień");
   });
 
-  const ButtonPaper = document.getElementById("play-paper");
-  ButtonPaper.addEventListener("click", function () {
+  const buttonPaper = document.getElementById("play-paper");
+  buttonPaper.addEventListener("click", function () {
     playGame(2);
     console.log("Kliknąłeś papier");
   });
 
-  const ButtonScisors = document.getElementById("play-scisors");
-  ButtonScisors.addEventListener("click", function () {
+  const buttonScisors = document.getElementById("play-scisors");
+  buttonScisors.addEventListener("click", function () {
     playGame(3);
     console.log("Kliknąłeś nożyce");
   });
