@@ -14,8 +14,9 @@
       printMessage("Nie znam ruchu o id " + argMoveId + ".");
       return "nieznany ruch";
     };
-    const randomNumber = Math.floor(Math.random() * 3 + 1),
-      computerMove = getMoveName(randomNumber);
+    const randomNumber = Math.floor(Math.random() * 3 + 1);
+
+    const computerMove = getMoveName(randomNumber);
 
     console.log("Wylosowana liczba to: " + randomNumber);
 
@@ -93,20 +94,21 @@ else if(playerInput == '3'){
     displayResult(computerMove, playerMove);
   };
 
-  document.getElementById("play-rock").addEventListener("click", function () {
+  const ButtonRock = document.getElementById("play-rock");
+  ButtonRock.addEventListener("click", function () {
     playGame(1);
     console.log("Kliknąłeś kamień");
   });
 
-  document.getElementById("play-paper").addEventListener("click", function () {
+  const ButtonPaper = document.getElementById("play-paper");
+  ButtonPaper.addEventListener("click", function () {
     playGame(2);
     console.log("Kliknąłeś papier");
   });
 
-  document
-    .getElementById("play-scisors")
-    .addEventListener("click", function () {
-      playGame(3);
-      console.log("Kliknąłeś nożyce");
-    });
+  const ButtonScisors = document.getElementById("play-scisors");
+  ButtonScisors.addEventListener("click", function () {
+    playGame(3);
+    console.log("Kliknąłeś nożyce");
+  });
 }
